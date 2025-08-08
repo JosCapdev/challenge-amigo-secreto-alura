@@ -82,7 +82,7 @@ function bloqueoDeBotonesXComienzoSorteo(){
     document.getElementById('agregar').setAttribute('disabled', true);
 }
 
-function desbloquebloqueoDeBotones(){
+function desbloqueoDeBotones(){
     document.getElementById('amigo').removeAttribute('disabled', true);
     document.getElementById('agregar').removeAttribute('disabled', true);
 }
@@ -93,6 +93,6 @@ function reiniciarJuego() {
     limpiarCampo();
     limpiarLista();
     condicionesIniciales();
-    desbloquebloqueoDeBotones();
+    desbloqueoDeBotones();
     document.getElementById('sortear').removeAttribute('disabled', true); 
 }

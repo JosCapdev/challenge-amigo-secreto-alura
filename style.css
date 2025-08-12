@@ -88,8 +88,10 @@ body {
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-top: 20px;
 }
 
 /* Estilos de entrada de texto */
@@ -135,11 +137,29 @@ ul {
 }
 
 .result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.result-list li {
+  background-color: #4B69FD;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.6s forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Botón de sortear título */
@@ -159,4 +179,77 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.amigo-item {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.amigo-bloque {
+    background-color: #4B69FD;
+    padding: 12px 20px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.amigo-bloque:hover {
+    transform: scale(1.05);
+}
+
+.container__boton {
+    background-color: #4B69FD;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.container__boton:hover:enabled {
+    transform: scale(1.05);
+}
+
+.container__boton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.boton-confirmar {
+  display: none;
+  background-color: #4B69FD;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.boton-confirmar:hover {
+  background-color: #3a55d4;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

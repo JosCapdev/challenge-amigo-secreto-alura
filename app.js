@@ -66,7 +66,7 @@ function sortearAmigo(){
     bloqueoDeBotonesXComienzoSorteo();
     // Verifica que hayan ingresado amigos y que sean pares por los regalos
     if (amigos.length === 0) {
-        asignarTextoElemento('h2', 'No hay suficientes amigos diferentes para sortear.');
+        asignarTextoElemento('h2', 'No hay suficientes amigos para sortear.');
         desbloqueoDeBotones();
         return;
     } else if (amigos.length % 2 === 1) {

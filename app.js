@@ -112,7 +112,7 @@ function sortearAmigo(){
 
     // Se bloquea el boton sortear 
     document.getElementById('sortear').setAttribute('disabled', true);
-    
+
     // Se confirma si esta listo el amigo que se le va asignar un amigo secreto
     const boton = document.querySelector('#boton-confirmar');
     boton.style.display = 'block'; // Mostrar el botón
@@ -142,7 +142,6 @@ function desbloqueoDeBotones(){
 
 function reiniciarJuego() {
     amigos = [];
-    amigoRegalador = null;
     amigosYaSorteados = [];
     amigosYaSeleccionados = [];
     limpiarCampo();
